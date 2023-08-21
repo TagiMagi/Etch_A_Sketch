@@ -1,11 +1,19 @@
 
 const container = document.querySelector('.container')
+let gridSize = 16;
+
+function gridSizePrompt () {
+    let el = document.getElementById('button')
+    gridSize = prompt("Enter a number under 100 to adjust the grid size", 16)
+
+}
 
 function makeGrid() {
-for (let i = 0; i < 16; i++) {
+
+for (let i = 0; i < gridSize; i++) {
     let div = document.createElement('div');
     div.setAttribute('id', 'outerDivs');
-    for (let j = 0; j < 16; j++) {
+    for (let j = 0; j < gridSize; j++) {
         let innerDiv = document.createElement('div')
         innerDiv.setAttribute('id', 'innerDivs')
         div.appendChild(innerDiv);
@@ -23,7 +31,7 @@ function hoverLightOff (e) {
     
 }
 
-
+window.onload = gridSizePrompt();
 makeGrid();
 
 let litBoxes = Array.from(document.querySelectorAll('#innerDivs'));
