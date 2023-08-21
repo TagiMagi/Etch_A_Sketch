@@ -1,0 +1,28 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#outerDivs { 
+    display: flex;
+    
+}   
+
+#innerDivs {
+    border: solid black;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    margin: 4px;
+    transition: 2.5s ease;
+
+}
+
+.overLight {
+    border: solid yellow !important; 
+    background-color: silver;
+    transform: scale(1.4);
+    transition-duration: 0.0s !important;
+}
