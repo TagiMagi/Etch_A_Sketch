@@ -1,28 +1,33 @@
 .container {
-    position: absolute;
+   /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)*/
+    width: 720px;
+    height: 720px; 
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    margin: auto; 
+    justify-content: center;
+    
 }
 
 #outerDivs { 
     display: flex;
-    
+    justify-content: center;
+    align-items: center; 
 }   
 
 #innerDivs {
-    border: solid black;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    margin: 4px;
-    transition: 2.5s ease;
-
-}
+    border: 1px solid black;
+    transition: 3.0s ease;
+    box-sizing: border-box;
+}   
 
 .overLight {
     border: solid yellow !important; 
     background-color: silver;
-    transform: scale(1.4);
+    transform: scale(1.2);
     transition-duration: 0.0s !important;
 }
