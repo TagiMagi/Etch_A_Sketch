@@ -1,18 +1,26 @@
 
 const container = document.querySelector('.container')
 
-let gridSize = 16;
+let gridSize = 0;
 
 // propmpt user for grid size 
 
 function gridSizePrompt () {
     document.querySelector('.container').innerHTML = ""; 
     
-    gridSize = Number(prompt("Enter a number under 100 to adjust the grid size", 16));
+    gridSize = Math.floor(Number(prompt("Enter a number from 1-100 to adjust the grid size", 16)));
+   
+    // check that user input is between 0-100
+   
+    if (gridSize <= 0 || gridSize > 100) {
+        gridSizePrompt();
+    }
     
     makeGrid();
 }
-// create function that makes grid wuth user input while adjusting div height and width accordigly.
+
+
+// create function that makes grid with user input while adjusting div height and width accordigly.
 
 function makeGrid() {
 
@@ -52,7 +60,11 @@ function hoverLightOff (e) {
     
 }
 
+//prompt for user input upon page load
+
 window.onload = gridSizePrompt();
+
+//create button functionality 
 
 let gridSizeButton = document.querySelector('button');
 gridSizeButton.addEventListener('click', gridSizePrompt);

@@ -1,3 +1,10 @@
+
+button {
+    border: 2px solid purple;
+    background-color: yellow;
+    padding: 4px 10px;
+
+}
 .container {
    /* position: absolute;
     top: 50%;
@@ -5,7 +12,7 @@
     transform: translate(-50%, -50%)*/
     width: 720px;
     height: 720px; 
-    border: solid black;
+    border: 2px solid purple;
     display: flex;
     flex-direction: column;
     margin: auto; 
@@ -21,12 +28,12 @@
 
 #innerDivs {
     border: 1px solid black;
-    transition: 3.0s ease;
+    transition: 4.0s ease;
     box-sizing: border-box;
 }   
 
 .overLight {
-    border: solid yellow !important; 
+    border:2px solid yellow !important; 
     background-color: silver;
     transform: scale(1.2);
     transition-duration: 0.0s !important;
